@@ -16,13 +16,13 @@ import java.util.List;
 
 public class CountryAdapter extends RecyclerView.Adapter<CountryAdapter.CountryViewHolder> {
 
-    private List<Country> Country;
+    private List<Team> countryList;
 
     private Context context;
 
-    public CountryAdapter(Context context, List<Country>){
+    public CountryAdapter(Context context, List<Team> countryList){
         this.context = context;
-        this.Country = Country;
+        this.countryList = countryList;
     }
 
     @NonNull
@@ -34,13 +34,13 @@ public class CountryAdapter extends RecyclerView.Adapter<CountryAdapter.CountryV
 
     @Override
     public void onBindViewHolder(CountryViewHolder holder, int position) {
-        Team team = countriesFragmentList.get(position);
+        Team team = countryList.get(position);
         holder.txtCountryName.setText(team.getName_en());
     }
 
     @Override
     public int getItemCount() {
-        return countriesFragmentList.size();
+        return countryList.size();
     }
 
     public static class CountryViewHolder extends RecyclerView.ViewHolder {

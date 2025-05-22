@@ -6,9 +6,12 @@ import java.util.List;
 
 public class TeamResponse {
 
-    private List<Country> Country;
 
-    public List<CountriesFragment> getCountries() {
+    public List<Team> getCountries() {
         return countries;
     }
+
+    private List<Team> countries;
+
+
 }

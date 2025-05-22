@@ -1,6 +1,7 @@
 package com.example.pas_genap_15_27;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -47,11 +48,13 @@ public class CountriesFragment extends Fragment {
             public void onResponse(Call<TeamResponse> call, Response<TeamResponse> response) {
                 progressBar.setVisibility(View.GONE);
                 if (response.isSuccessful() && response.body() != null) {
-                    List<CountriesFragment> teams = response.body().getCountries();
+                    Log.d("IS_RUNNING", "Successfull");
+                    List<Team> teams = response.body().getCountries();
                     adapter = new CountryAdapter(getContext(), teams);
                     recyclerView.setAdapter(adapter);
                 } else {
                     Toast.makeText(getContext(), "Data kosong atau error", Toast.LENGTH_SHORT).show();
+                    Log.d("IS_RUNNING", "Error");
                 }
             }
 
