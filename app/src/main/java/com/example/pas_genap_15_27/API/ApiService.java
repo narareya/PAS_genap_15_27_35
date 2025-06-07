@@ -8,4 +8,9 @@ public interface ApiService {
     @GET("all_countries.php")
     Call<TeamResponse> getAllTeams(@Query("l") String country);
 
+    @GET("search_all_teams.php")
+    Call<TeamResponse> getLeague(@Query("l") String league);
+
+    @GET("all_sports.php")
+    Call<TeamResponse> getSports();
 }
