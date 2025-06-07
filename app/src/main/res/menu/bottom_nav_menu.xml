@@ -2,14 +2,18 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/nav_premiere"
-        android:title="Premiere"/>
+        android:icon="@drawable/premier2"
+        android:title="Premier"/>
     <item
         android:id="@+id/nav_teamclub"
-        android:title="Team Club"/>
+        android:icon="@drawable/flag2"
+        android:title="Country"/>
     <item
         android:id="@+id/nav_allsports"
+        android:icon="@drawable/sports2"
         android:title="All Sports"/>
     <item
         android:id="@+id/nav_profile"
+        android:icon="@drawable/user"
         android:title="Profile"/>
 </menu>
