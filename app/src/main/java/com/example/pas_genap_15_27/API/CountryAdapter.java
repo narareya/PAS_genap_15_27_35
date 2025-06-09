@@ -30,7 +30,7 @@ public class CountryAdapter extends RecyclerView.Adapter<CountryAdapter.CountryV
     @NonNull
     @Override
     public CountryViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(context).inflate(R.layout.item_team, parent, false);
+        View view = LayoutInflater.from(context).inflate(R.layout.item_team2, parent, false);
         return new CountryViewHolder(view);
     }
 
@@ -54,8 +54,8 @@ public class CountryAdapter extends RecyclerView.Adapter<CountryAdapter.CountryV
 
         public CountryViewHolder(View itemView) {
             super(itemView);
-            txtCountryName = itemView.findViewById(R.id.tvNamaTim);
-            imageLogo = itemView.findViewById(R.id.ivBadgeTeam);
+            txtCountryName = itemView.findViewById(R.id.txtTeamName);
+            imageLogo = itemView.findViewById(R.id.imageLogo);
         }
     }
 

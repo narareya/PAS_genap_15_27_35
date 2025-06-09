@@ -3,18 +3,18 @@ package com.example.pas_genap_15_27.API;
 public class TeamModel {
     private String strTeam;
     private String strStadium;
+    private String strLocation;
+    private String strSport;
+    private String strBadge;
+
 
     public String getStrLocation() {
         return strLocation;
     }
 
-    private String strLocation;
-
     public String getStrSport() {
         return strSport;
     }
-
-    private String strSport;
 
     public String getStrTeam() {
         return strTeam;
@@ -27,8 +27,6 @@ public class TeamModel {
     public String getStrBadge() {
         return strBadge;
     }
-
-    private String strBadge;
 
 
     public TeamModel (String strTeam, String strStadium,String strBadge,String strSport,String strLocation){

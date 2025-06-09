@@ -10,16 +10,17 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.pas_genap_15_27.AllSportsFragment;
 import com.example.pas_genap_15_27.R;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
 public class AllSportsAdapter extends RecyclerView.Adapter<AllSportsAdapter.TeamViewHolder> {
-    private List<Team> sportsList;
+    private List<AllSportsModel> sportsList;
     private Context context;
 
-    public AllSportsAdapter(Context context, List<Team> sportsList) {
+    public AllSportsAdapter(Context context, List<AllSportsModel> sportsList) {
         this.context = context;
         this.sportsList = sportsList;
     }
@@ -27,13 +28,13 @@ public class AllSportsAdapter extends RecyclerView.Adapter<AllSportsAdapter.Team
     @NonNull
     @Override
     public AllSportsAdapter.TeamViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(context).inflate(R.layout.item_team, parent, false);
+        View view = LayoutInflater.from(context).inflate(R.layout.item_team2, parent, false);
         return new TeamViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull AllSportsAdapter.TeamViewHolder holder, int position) {
-        Team sport = sportsList.get(position);
+        AllSportsModel sport = sportsList.get(position);
         holder.txtSport.setText(sport.getStrSport());
         holder.txtDescription.setText(sport.getStrSportDescription());
         Picasso.get().load(sport.getStrSportIconGreen()).into(holder.imageLogo);
@@ -50,9 +51,9 @@ public class AllSportsAdapter extends RecyclerView.Adapter<AllSportsAdapter.Team
 
         public TeamViewHolder(@NonNull View itemView) {
             super(itemView);
-            txtSport = itemView.findViewById(R.id.tvNamaTim);
-            txtDescription = itemView.findViewById(R.id.tvStadium);
-            imageLogo = itemView.findViewById(R.id.ivBadgeTeam);
+            txtSport = itemView.findViewById(R.id.txtTeamName);
+            txtDescription = itemView.findViewById(R.id.txtStadiumName);
+            imageLogo = itemView.findViewById(R.id.imageLogo);
         }
     }
 }

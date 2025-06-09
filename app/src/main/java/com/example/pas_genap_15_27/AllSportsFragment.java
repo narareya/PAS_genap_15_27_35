@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.pas_genap_15_27.API.AllSportsAdapter;
+import com.example.pas_genap_15_27.API.AllSportsModel;
 import com.example.pas_genap_15_27.API.ApiClient;
 import com.example.pas_genap_15_27.API.ApiService;
 import com.example.pas_genap_15_27.API.PremierAdapter;
@@ -30,7 +31,7 @@ public class AllSportsFragment extends Fragment {
     RecyclerView recyclerView;
     ProgressBar progressBar;
     AllSportsAdapter sportsAdapter;
-    List<Team> sports = new ArrayList<>();
+    List<AllSportsModel> sports = new ArrayList<>();
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
