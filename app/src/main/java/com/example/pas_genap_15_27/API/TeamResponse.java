@@ -8,10 +8,10 @@ public class TeamResponse {
     // untuk tempat data
     private List<TeamModel> teams;
     private List<Team> countries;
-    private List<Team> sports;
+    private List<AllSportsModel> sports;
 
     public List<TeamModel> getTeams() { return teams; }
     public List<Team> getCountries() { return countries; }
-    public List<Team> getSports() { return sports; }
+    public List<AllSportsModel> getSports() { return sports; }
 
 }
