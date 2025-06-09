@@ -54,8 +54,8 @@ public class CountryAdapter extends RecyclerView.Adapter<CountryAdapter.CountryV
 
         public CountryViewHolder(View itemView) {
             super(itemView);
-            txtCountryName = itemView.findViewById(R.id.txtTeamName);
-            imageLogo = itemView.findViewById(R.id.imageLogo);
+            txtCountryName = itemView.findViewById(R.id.tvNamaTim);
+            imageLogo = itemView.findViewById(R.id.ivBadgeTeam);
         }
     }
 

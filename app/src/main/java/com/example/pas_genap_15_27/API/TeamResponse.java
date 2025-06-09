@@ -6,11 +6,11 @@ import java.util.List;
 
 public class TeamResponse {
     // untuk tempat data
-    private List<Team> teams;
+    private List<TeamModel> teams;
     private List<Team> countries;
     private List<Team> sports;
 
-    public List<Team> getTeams() { return teams; }
+    public List<TeamModel> getTeams() { return teams; }
     public List<Team> getCountries() { return countries; }
     public List<Team> getSports() { return sports; }
 

@@ -50,9 +50,9 @@ public class AllSportsAdapter extends RecyclerView.Adapter<AllSportsAdapter.Team
 
         public TeamViewHolder(@NonNull View itemView) {
             super(itemView);
-            txtSport = itemView.findViewById(R.id.txtTeamName);
-            txtDescription = itemView.findViewById(R.id.txtStadiumName);
-            imageLogo = itemView.findViewById(R.id.imageLogo);
+            txtSport = itemView.findViewById(R.id.tvNamaTim);
+            txtDescription = itemView.findViewById(R.id.tvStadium);
+            imageLogo = itemView.findViewById(R.id.ivBadgeTeam);
         }
     }
 }
