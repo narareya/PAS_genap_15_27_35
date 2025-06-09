@@ -16,10 +16,10 @@ import com.squareup.picasso.Picasso;
 import java.util.List;
 
 public class PremierAdapter extends RecyclerView.Adapter<PremierAdapter.TeamViewHolder> {
-    private List<Team> teamList;
+    private List<TeamModel> teamList;
     private Context context;
 
-    public PremierAdapter(Context context, List<Team> teamList) {
+    public PremierAdapter(Context context, List<TeamModel> teamList) {
         this.context = context;
         this.teamList = teamList;
     }
@@ -33,10 +33,12 @@ public class PremierAdapter extends RecyclerView.Adapter<PremierAdapter.TeamView
 
     @Override
     public void onBindViewHolder(@NonNull PremierAdapter.TeamViewHolder holder, int position) {
-        Team team = teamList.get(position);
+        TeamModel team = teamList.get(position);
         holder.txtTeamName.setText(team.getStrTeam());
         holder.txtStadiumName.setText(team.getStrStadium());
         Picasso.get().load(team.getStrBadge()).into(holder.imageLogo);
+        holder.txtSport.setText(team.getStrSport());
+        holder.txtLocation.setText(team.getStrLocation());
     }
 
     @Override
@@ -45,14 +47,16 @@ public class PremierAdapter extends RecyclerView.Adapter<PremierAdapter.TeamView
     }
 
     public static class TeamViewHolder extends RecyclerView.ViewHolder {
-        TextView txtTeamName, txtStadiumName;
+        TextView txtTeamName, txtStadiumName,txtSport,txtLocation;
         ImageView imageLogo;
 
         public TeamViewHolder(@NonNull View itemView) {
             super(itemView);
-            txtTeamName = itemView.findViewById(R.id.txtTeamName);
-            txtStadiumName = itemView.findViewById(R.id.txtStadiumName);
-            imageLogo = itemView.findViewById(R.id.imageLogo);
+            txtTeamName = itemView.findViewById(R.id.tvNamaTim);
+            txtStadiumName = itemView.findViewById(R.id.tvStadium);
+            imageLogo = itemView.findViewById(R.id.ivBadgeTeam);
+            txtSport = itemView.findViewById(R.id.tvSport);
+            txtLocation = itemView.findViewById(R.id.tvLocation);
         }
     }
 }

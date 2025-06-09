@@ -16,6 +16,7 @@ import com.example.pas_genap_15_27.API.ApiClient;
 import com.example.pas_genap_15_27.API.ApiService;
 import com.example.pas_genap_15_27.API.PremierAdapter;
 import com.example.pas_genap_15_27.API.Team;
+import com.example.pas_genap_15_27.API.TeamModel;
 import com.example.pas_genap_15_27.API.TeamResponse;
 
 import java.util.ArrayList;
@@ -29,7 +30,7 @@ public class PremierFragment extends Fragment {
     RecyclerView recyclerView;
     ProgressBar progressBar;
     PremierAdapter premierAdapter;
-    List<Team> teams = new ArrayList<>();
+    List<TeamModel> teams = new ArrayList<>();
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
